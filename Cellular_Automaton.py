@@ -4,6 +4,20 @@ from tqdm import tqdm
 plt.style.use('dark_background')
 
 class Cellular_Automaton(object):
+    '''Example:
+
+    >> from "path" import Cellular_Automaton
+    >> import numpy as np
+    >> 
+    >> n = 50
+    >>
+    >> init_cond = np.zeros(2*n+1, dtype=int)
+    >> init_cond[n] = 1
+    >>
+    >> CA = Cellular_Automaton(init_cond, 30, n)
+    >>
+    >> CA.Show()
+    '''
     default_size = 1
     def __init__(self, init_cond, rule, steps, show_progress=False, coup_bord=True):
         self.DE = coup_bord
@@ -60,6 +74,6 @@ class Cellular_Automaton(object):
     def Show(self, cmap='gray'):
         size = Cellular_Automaton.default_size*5
         plt.rcParams["figure.figsize"] = (size, size)
-        plt.axis('off')
+        #plt.axis('off')
         plt.imshow(self.matrix, cmap=cmap)
         plt.show()
