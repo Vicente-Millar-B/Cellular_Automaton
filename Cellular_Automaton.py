@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt, numpy as np, time, os
 from tqdm import tqdm
-from matplotlib import font_manager as fm, rcParams
 
 plt.style.use('dark_background')
 
