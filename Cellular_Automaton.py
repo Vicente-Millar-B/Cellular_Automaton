@@ -74,6 +74,6 @@ class Cellular_Automaton(object):
     def Show(self, cmap='gray'):
         size = Cellular_Automaton.default_size*5
         plt.rcParams["figure.figsize"] = (size, size)
-        plt.axis('off')
+        #plt.axis('off')
         plt.imshow(self.matrix, cmap=cmap)
         plt.show()
